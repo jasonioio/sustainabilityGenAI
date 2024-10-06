@@ -37,7 +37,7 @@ pip install -r requirements.txt
 Once the installation is complete, you can start the Streamlit app by running the following command:
 
 ```shell
-python3 -m streamlit app.py
+python3 -m streamlit run app.py
 ```
 
 Make sure you are in the correct directory where the `streamlit_app.py` file is located.
