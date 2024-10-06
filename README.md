@@ -15,3 +15,20 @@ UBC's energy usage data is available here: https://energy.ubc.ca/projects/skyspa
 ![alt text](Screenshot_2024-10-05_at_5.15.06_PM.png "Demo 1")
 ![alt text](Screenshot_2024-10-05_at_5.49.56_PM.png "Architecture diagram")
 ![alt text](Screenshot_2024-10-05_at_5.53.37_PM.png "Architecture diagram")
+
+# How to use
+
+To install the required dependencies, run the following command in your terminal:
+
+```shell
+pip install -r requirements.txt
+```
+
+Once the installation is complete, you can start the Streamlit app by running the following command:
+
+```shell
+python3 -m streamlit app.py
+```
+
+Make sure you are in the correct directory where the `streamlit_app.py` file is located.
+
