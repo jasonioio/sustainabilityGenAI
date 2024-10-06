@@ -9,3 +9,9 @@ We parsed the raw CSV file to a text file with rows of the building name, date, 
 UBC's energy usage data is available here: https://energy.ubc.ca/projects/skyspark/
 
 ![alt text](arch_diagram.png "Architecture diagram")
+
+# Demo
+
+![alt text](Screenshot_2024-10-05_at_5.15.06_PM.png "Demo 1")
+![alt text](Screenshot_2024-10-05_at_5.49.56_PM.png "Architecture diagram")
+![alt text](Screenshot_2024-10-05_at_5.53.37_PM.png "Architecture diagram")
