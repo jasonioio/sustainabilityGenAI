@@ -23,6 +23,8 @@ UBC's energy usage data is available here: https://energy.ubc.ca/projects/skyspa
 ![image](top5_mostexpensive.png)
 # Which building should be improved
 ![image](demo.png)
+# Light mode
+![image](lightmode.png)
 
 # How to use
 
