@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 import json
+import catppuccin
 
 # Define the API endpoint
 API_ENDPOINT = "https://wjsqyfi4n2.execute-api.us-west-2.amazonaws.com/prod/my-function"
@@ -109,7 +110,9 @@ with st.container():
                         values.append(value)
 
                 df = pd.DataFrame({'Keys': keys, 'Values': values})
-                
+
+
+                plt.style.use(catppuccin.PALETTE.macchiato.identifier)
                 plt.figure(figsize=(10, 5))
                 plt.bar(df['Keys'], df['Values'], color='skyblue')
                 plt.xlabel('Keys')
