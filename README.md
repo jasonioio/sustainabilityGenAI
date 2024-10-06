@@ -10,11 +10,19 @@ UBC's energy usage data is available here: https://energy.ubc.ca/projects/skyspa
 
 ![alt text](arch_diagram.png "Architecture diagram")
 
-# Demo
+## Demo
 
-![alt text](Screenshot_2024-10-05_at_5.15.06_PM.png "Demo 1")
-![alt text](Screenshot_2024-10-05_at_5.49.56_PM.png "Architecture diagram")
-![alt text](Screenshot_2024-10-05_at_5.53.37_PM.png "Architecture diagram")
+# Chat UI
+![image](greenbotui.png)
+# Cookies and Cream
+![image](cookiesandcream.png)
+# Asking about the greenest building
+![image](greenest_building.png)
+# Asking about the buildings that use the most energy
+![image](most_energy.png)
+![image](top5_mostexpensive.png)
+# Which building should be improved
+![image](demo.png)
 
 # How to use
 
@@ -31,4 +39,3 @@ python3 -m streamlit app.py
 ```
 
 Make sure you are in the correct directory where the `streamlit_app.py` file is located.
-
