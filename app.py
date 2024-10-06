@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import json
 import catppuccin
+from io import BytesIO
 
 # Define the API endpoint
 API_ENDPOINT = "https://wjsqyfi4n2.execute-api.us-west-2.amazonaws.com/prod/my-function"
@@ -58,8 +59,12 @@ with st.container():
     # Display cloud emojis in a fixed position
     st.markdown(f'<div style="font-size: 50px; text-align: center; margin-top: 10%;">{clouds}</div>', unsafe_allow_html=True)
 
-    # Updated title of the app
-    st.title("Building Energy Consumption Chatbot 🏢")
+    st.markdown(
+    """
+    <h1 style="text-align: center;">UBC Green Bot 🍃</h1>
+    """, 
+    unsafe_allow_html=True
+    )
 
     # User input field
     prompt = st.text_input("Enter your prompt:")
@@ -111,15 +116,31 @@ with st.container():
 
                 df = pd.DataFrame({'Keys': keys, 'Values': values})
 
-
+                # Plot the bar graph
                 plt.style.use(catppuccin.PALETTE.macchiato.identifier)
-                plt.figure(figsize=(10, 5))
-                plt.bar(df['Keys'], df['Values'], color='skyblue')
-                plt.xlabel('Keys')
-                plt.ylabel('Values')
-                plt.title('Bar Graph of Response Array')
-                plt.xticks(rotation=45)
+                fig, ax = plt.subplots(figsize=(10, 5))
+                ax.bar(df['Keys'], df['Values'], color='skyblue')
+                ax.set_xlabel('Keys')
+                ax.set_ylabel('Values')
+                ax.set_title('Bar Graph of Response Array')
+                ax.set_xticks(range(len(df['Keys'])))
+                ax.set_xticklabels(df['Keys'], rotation=45)
                 plt.tight_layout()
-                st.pyplot(plt)
+
+                # Display the graph in the Streamlit app
+                st.pyplot(fig)
+
+                # Save the plot to a BytesIO object
+                img_buffer = BytesIO()
+                fig.savefig(img_buffer, format='png')
+                img_buffer.seek(0)
+
+                # Provide download button for the generated graph
+                st.download_button(
+                    label="Download Graph as PNG",
+                    data=img_buffer,
+                    file_name="generated_graph.png",
+                    mime="image/png"
+                )
 
     st.markdown('</div>', unsafe_allow_html=True)
