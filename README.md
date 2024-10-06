@@ -1,4 +1,4 @@
-#UBC CIC Gen AI and Sustainability Hackathon 2024
+# UBC CIC Gen AI and Sustainability Hackathon 2024
 
 A key sustainability goal defined by the UN includes clean and affordable energy; industry, innovation, and infrastructure; responsible consumption and production; climate action; and sustainable cities and communities. Energy use is a major aspect of UBC operations, hosting over 60,000 students and 16,000 staff on more than 400 hectares. 
 
